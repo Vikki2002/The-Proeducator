@@ -30,23 +30,25 @@ const CoursesPage: React.FC = () => {
     const query = pathname.split("/").filter(Boolean).pop();
 
     useEffect(() => {
+        const fetchCoursesByUniversityName = async () => {
+            try {
+                console.log("query", query)
+                const coursesResponse = await axios.get(`/api/courses`, {
+                    params: { query }
+                })
+                console.log(coursesResponse)
+                if (coursesResponse.data.success) {
+                    setCoursesData(coursesResponse.data.coursesByUniversities)
+                }
+            } catch (error) {
+                console.log("error", error)
+            }
+        }
+
         fetchCoursesByUniversityName()
     }, [query])
 
-    const fetchCoursesByUniversityName = async () => {
-        try {
-            console.log("query", query)
-            const coursesResponse = await axios.get(`/api/courses`, {
-                params: { query }
-            })
-            console.log(coursesResponse)
-            if (coursesResponse.data.success) {
-                setCoursesData(coursesResponse.data.coursesByUniversities)
-            }
-        } catch (error) {
-            console.log("error", error)
-        }
-    }
+
 
     const filteredCourses = coursesData.filter((course) =>
         course.course_name.toLowerCase().includes(searchTerm.toLowerCase())
