@@ -12,8 +12,8 @@ import VisaWeatherCard from "@/components/destinationsComponents/VisaWeatherCard
 import FAQ from "@/components/shared/faq";
 import AdmissionTimeline from "@/components/destinationsComponents/admissionTimeline";
 import CostOfLiving from "@/components/destinationsComponents/costOfLiving";
-import Navbar from "@/components/navbar/navbar";
-import Footer from "@/components/shared/footer";
+import Navbar from "../../../components/navbar/navbar";
+import Footer from "../../../components/shared/footer";
 import { usePathname } from "next/navigation";
 import BookingModal from "@/components/bookingModel/BookingModel";
 import axios from "axios";
@@ -22,7 +22,7 @@ import Flag from "react-world-flags";
 import { getCountryCode } from "@/helper/countryData";
 import Link from "next/link";
 import { setupSSE } from "@/hooks/useSSE";
-import ComingSoon from "@/components/shared/ComingSoon";
+// import ComingSoon from "@/components/shared/ComingSoon";
 
 
 interface WeatherData {

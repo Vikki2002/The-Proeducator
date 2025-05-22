@@ -2,8 +2,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Phone, Mail, MessageSquare, Globe, Building } from "lucide-react";
-import Navbar from "@/components/navbar/navbar";
-import Footer from "@/components/shared/footer";
+import Navbar from "../../components/navbar/navbar";
+import Footer from "../../components/shared/footer";
 
 const ContactPage: React.FC = () => {
     return (
