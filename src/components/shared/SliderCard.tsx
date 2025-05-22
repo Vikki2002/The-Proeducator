@@ -1,5 +1,6 @@
 "use client"
 import { useEffect, useRef } from "react";
+import Image from 'next/image';
 
 const quotes = [
     {
@@ -78,7 +79,8 @@ export default function SliderCard() {
         >
             {quotes.map((quote, index) => (
                 <figure key={index} className="relative overflow-hidden rounded-lg shadow-lg w-[320px] flex-none bg-white">
-                    <img src={quote.image} alt={quote.author} className="w-[320px] h-[300px] object-cover" />
+                    <Image src={quote.image} alt={quote.author} width={320} height={300} className="object-cover" />
+
                     <blockquote className="relative p-6 italic text-gray-700 text-sm leading-relaxed">
                         {quote.text}
                         <div className="absolute bottom-0 left-6 text-6xl text-gray-300 opacity-30">“</div>

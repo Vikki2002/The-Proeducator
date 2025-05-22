@@ -2,6 +2,7 @@
 import { LogOutIcon } from 'lucide-react'
 import React from 'react'
 import { signOut } from "next-auth/react";
+import Image from 'next/image';
 
 
 export default function Setting_Component() {
@@ -13,7 +14,14 @@ export default function Setting_Component() {
             <div className='flex lg:flex-row md:flex-row flex-col gap-4'>
                 <div className="avatar">
                     <div className="w-32 rounded-full overflow-hidden">
-                        <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" className="w-full h-full object-cover" />
+                        <Image 
+                            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" 
+                            alt="User profile avatar"
+                            width={128}
+                            height={128}
+                            className="w-full h-full object-cover"
+                        />
+
                     </div>
                 </div>
 

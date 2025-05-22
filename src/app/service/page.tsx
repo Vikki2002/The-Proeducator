@@ -272,12 +272,14 @@ export default function Service() {
                                     <div>
                                         <div className="flex items-center gap-4 mb-4">
                                             <div className="p-3 bg-primary/10 rounded-full">
-                                                <img
-                                                    src={service.icon}
-                                                    alt={`Icon for ${service.name}`}
-                                                    className="w-10 h-10 object-contain"
-                                                />
-                                            </div>
+                                                        <Image
+                                                            src={service.icon}
+                                                            alt={`Icon for ${service.name}`}
+                                                            width={40}
+                                                            height={40}
+                                                            className="object-contain"
+                                                        />
+                                                    </div>
                                             <h3 className="card-title">{service.name}</h3>
                                         </div>
                                         <p className="text-gray-600 mb-4">{service.description}</p>
@@ -499,7 +501,7 @@ export default function Service() {
                                     <div className="flex items-center gap-4 mb-4">
                                         <div className="avatar">
                                             <div className="w-16 rounded-full">
-                                                <img src={`/testimonials/student${item}.jpg`} alt="Student" />
+                                                <Image src={`/testimonials/student${item}.jpg`} alt="Student" width={64} height={64} />
                                             </div>
                                         </div>
                                         <div>
@@ -523,7 +525,7 @@ export default function Service() {
                                     <div className="flex items-center gap-4 mb-4">
                                         <div className="avatar">
                                             <div className="w-16 rounded-full">
-                                                <img src={`/testimonials/student${item}.jpg`} alt="Student" />
+                                                <Image src={`/testimonials/student${item}.jpg`} alt="Student" width={64} height={64} />
                                             </div>
                                         </div>
                                         <div>

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Search, BookOpen, Clock, Filter } from 'lucide-react';
+import Image from 'next/image';
 
 const courses = [
   {
@@ -88,7 +89,7 @@ export default function CoursesComponentPage() {
           filteredCourses.map((course) => (
             <div key={course.id} className="card shadow-lg cursor-pointer">
               <figure>
-                <img src={course.image} alt={course.name} className="w-full h-48 object-cover" />
+                <Image src={course.image} alt={course.name} width={800} height={192} className="w-full h-48 object-cover" />
               </figure>
               <div className="card-body">
                 <h2 className="card-title">{course.name}</h2>

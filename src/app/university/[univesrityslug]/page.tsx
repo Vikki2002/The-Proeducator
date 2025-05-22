@@ -29,34 +29,35 @@ const UniversityList: React.FC = () => {
     const [universityData, setUniversityData] = useState<University[]>([]);
 
     useEffect(() => {
+        const fetchUniversitiesByCountry = async () => {
+            console.log("Fetching universities for country:", query);
+            setLoading(true);
+            try {
+                const universityResponse = await axios.get(`/api/universities`, {
+                    params: { query }
+                });
+                console.log("API Response:", universityResponse);
+                if (universityResponse.data.success) {
+                    setUniversityData(universityResponse.data.data);
+                    setMessage(universityResponse.data.message);
+                    setMessageType("success");
+                }
+            } catch (error) {
+                setMessage(error instanceof Error ? error.message : "An error occurred");
+                setMessageType("error");
+            }
+            setLoading(false);
+
+            // Clear messages after 3 seconds
+            setTimeout(() => {
+                setMessage("");
+                setMessageType("");
+            }, 3000);
+        };
         fetchUniversitiesByCountry();
     }, [query]); // Dependency array to avoid infinite loops
 
-    const fetchUniversitiesByCountry = async () => {
-        console.log("Fetching universities for country:", query);
-        setLoading(true);
-        try {
-            const universityResponse = await axios.get(`/api/universities`, {
-                params: { query }
-            });
-            console.log("API Response:", universityResponse);
-            if (universityResponse.data.success) {
-                setUniversityData(universityResponse.data.data);
-                setMessage(universityResponse.data.message);
-                setMessageType("success");
-            }
-        } catch (error) {
-            setMessage(error instanceof Error ? error.message : "An error occurred");
-            setMessageType("error");
-        }
-        setLoading(false);
 
-        // Clear messages after 3 seconds
-        setTimeout(() => {
-            setMessage("");
-            setMessageType("");
-        }, 3000);
-    };
 
     // Filter universities based on search query
     const filteredUniversities = universityData.filter((uni) =>

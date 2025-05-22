@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import Sidebar from './Sidebar';
 import { Bell, Calendar, GraduationCap, BookOpen, Award, ArrowRight } from 'lucide-react';
 import Navbar from '../navbar/navbar';
+import Image from 'next/image';
 
 const UserMainPage = () => {
     const [showNotifications, setShowNotifications] = useState(false);
@@ -16,7 +17,12 @@ const UserMainPage = () => {
                     <div className='flex lg:flex-row md:flex-row flex-col justify-center gap-4'>
                         <div className="avatar">
                             <div className="w-32 rounded">
-                                <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                                <Image 
+                                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                                    alt="User profile"
+                                    width={128}
+                                    height={128}
+                                />
                             </div>
                         </div>
 

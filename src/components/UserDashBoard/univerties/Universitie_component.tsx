@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Search, MapPin, GraduationCap, DollarSign, Filter } from "lucide-react";
+import Image from "next/image";
 
 const universities = Array.from({ length: 50 }, (_, i) => ({
     id: i + 1,
@@ -82,7 +83,8 @@ export default function Universities() {
                 {paginatedUniversities.map((university) => (
                     <div key={university.id} className="card bg-base-100 shadow-xl">
                         <figure>
-                            <img src={university.image} alt={university.name} className="h-48 w-full object-cover" />
+                            <Image src={university.image} alt={university.name} width={800} height={192} className="h-48 w-full object-cover" />
+
                         </figure>
                         <div className="card-body">
                             <h3 className="card-title">{university.name}</h3>

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Calendar, DollarSign, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 
 const scholarships = [
     {
@@ -71,7 +72,8 @@ export default function ScholarshipsPage() {
                 {paginatedScholarships.map(scholarship => (
                     <div key={scholarship.id} className="card bg-base-100 shadow-xl">
                         <figure>
-                            <img src={scholarship.image} alt={scholarship.name} className="h-48 w-full object-cover" />
+                            <Image src={scholarship.image} alt={scholarship.name} width={800} height={192} className="h-48 w-full object-cover" />
+
                         </figure>
                         <div className="card-body">
                             <h3 className="card-title">{scholarship.name}</h3>
