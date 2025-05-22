@@ -15,7 +15,7 @@ import CostOfLiving from "../../../components/destinationsComponents/costOfLivin
 import Navbar from "../../../components/navbar/navbar";
 import Footer from "../../../components/shared/footer";
 import { usePathname } from "next/navigation";
-import BookingModal from "@/components/bookingModel/BookingModel";
+import BookingModal from "../../../components/bookingModel/BookingModel";
 import axios from "axios";
 import { useCountryContext } from "../../../context/DestinationProvider";
 import Flag from "react-world-flags";

@@ -7,7 +7,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import Flag from "react-world-flags";
 import CircularLoader from "../shared/Loader/CircularLoader";
-import { setupSSE } from "@/hooks/useSSE";
+import { setupSSE } from "../../hooks/useSSE";
 
 interface Country {
     _id: string;
