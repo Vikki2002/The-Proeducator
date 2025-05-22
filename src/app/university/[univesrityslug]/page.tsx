@@ -1,11 +1,11 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import Navbar from "@/components/navbar/navbar";
-import Footer from "@/components/shared/footer";
+import Navbar from "../../../components/navbar/navbar";
+import Footer from "../../../components/shared/footer";
 import { University, Search, GraduationCap } from "lucide-react";
 import Link from "next/link";
-import Loader from "@/components/shared/Loader/Loader";
+import Loader from "../../../components/shared/Loader/Loader";
 import axios from "axios";
 import { usePathname } from "next/navigation";
 

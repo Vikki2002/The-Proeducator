@@ -1,6 +1,6 @@
-import About from "@/components/about/About"
-import Navbar from "@/components/navbar/navbar"
-import Footer from "@/components/shared/footer"
+import About from "../../components/about/About"
+import Navbar from "../../components/navbar/navbar"
+import Footer from "../../components/shared/footer"
 
 
 const page = () => {

@@ -1,5 +1,5 @@
-import Navbar from '@/components/navbar/navbar'
-import ProfileCompletionStepper from '@/components/UserDashBoard/profile/Profile_form'
+import Navbar from '../../../components/navbar/navbar'
+import ProfileCompletionStepper from '../../../components/UserDashBoard/profile/Profile_form'
 import React from 'react'
 
 const page = () => {

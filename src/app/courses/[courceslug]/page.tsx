@@ -2,8 +2,8 @@
 import { useEffect, useState } from "react";
 import { BookOpen, Search, Clock, Award, Users } from "lucide-react";
 import { motion } from "framer-motion";
-import Navbar from "@/components/navbar/navbar";
-import Footer from "@/components/shared/footer";
+import Navbar from "../../../components/navbar/navbar";
+import Footer from "../../../components/shared/footer";
 import { usePathname } from "next/navigation";
 import axios from "axios";
 

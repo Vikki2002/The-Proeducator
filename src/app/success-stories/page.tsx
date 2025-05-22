@@ -1,5 +1,5 @@
-import Navbar from '@/components/navbar/navbar'
-import Footer from '@/components/shared/footer'
+import Navbar from '../../components/navbar/navbar'
+import Footer from '../../components/shared/footer'
 import SuccessStories from '@/components/success-stories/HomeStories'
 import React from 'react'
 

@@ -1,6 +1,6 @@
-import Navbar from "@/components/navbar/navbar"
-import IELTS from "@/components/prep-zone/IELTS"
-import Footer from "@/components/shared/footer"
+import Navbar from "../../../components/navbar/navbar"
+import IELTS from "../../../components/prep-zone/IELTS"
+import Footer from "../../../components/shared/footer"
 
 
 const page = () => {

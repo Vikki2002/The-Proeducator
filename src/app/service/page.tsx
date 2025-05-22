@@ -1,7 +1,7 @@
 "use client";
 
-import Navbar from "@/components/navbar/navbar";
-import Footer from "@/components/shared/footer";
+import Navbar from "../../components/navbar/navbar";
+import Footer from "../../components/shared/footer";
 import Image from "next/image";
 import React, { useState } from "react";
 import { motion } from "framer-motion";

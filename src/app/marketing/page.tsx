@@ -1,7 +1,7 @@
 "use client";
 
-import Navbar from "@/components/navbar/navbar";
-import Footer from "@/components/shared/footer";
+import Navbar from "../../components/navbar/navbar";
+import Footer from "../../components/shared/footer";
 import { motion } from "framer-motion";
 import { FaGraduationCap, FaUsers, FaUniversity, FaDollarSign } from "react-icons/fa";
 import dynamic from "next/dynamic";

@@ -1,6 +1,6 @@
-import Navbar from "@/components/navbar/navbar"
-import Footer from "@/components/shared/footer"
-import Webinar_Component from "@/components/webinar_component/Webinar"
+import Navbar from "../../components/navbar/navbar"
+import Footer from "../../components/shared/footer"
+import Webinar_Component from "../../components/webinar_component/Webinar"
 
 const Webinar = () => {
     return (<>
